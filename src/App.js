@@ -2,8 +2,8 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-  Redirect,
+  Routes,
+  Navigate,
 } from 'react-router-dom';
 import Header from './components/Header';
 import Main from './pages/Main';
@@ -16,12 +16,12 @@ function App() {
     <Router>
       <div>
         <Header />
-        <Switch>
-          <Route exact path='/' component={Main} />
-          <Route path='/contact' component={Contact} />
-          <Route path='/about' component={About} />
-          <Redirect from='/pristilbud' to='/contact' />
-        </Switch>
+        <Routes>
+          <Route path='/' element={<Main />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/pristilbud' element={<Navigate to='/contact' />} />
+        </Routes>
         <Footer />
       </div>
     </Router>
