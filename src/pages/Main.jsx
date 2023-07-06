@@ -186,7 +186,7 @@ function Main() {
                   </p>
                   <a
                     href='contact'
-                    className='inline-block mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg sm:inline sm:mt-0 sm:ml-4'>
+                    className='inline-block mt-8 px-4 py-2 bg-blue-500 text-white rounded-lg sm:inline sm:mt-0 sm:ml-4'>
                     Få svar - Ofte stilte spørsmål
                   </a>
                 </div>
