@@ -200,7 +200,7 @@ function Main() {
                 <div className='w-full md:w-1/3 px-4 mb-5'>
                   <div className='card-img h-full relative'>
                     <img
-                      src='/images/PremierMovers.jpeg'
+                      src='/images/premier-movers.jpeg'
                       alt=''
                       className='img-fluid-services object-cover w-full h-full'
                     />
@@ -214,7 +214,7 @@ function Main() {
                 <div className='w-full md:w-1/3 px-4 mb-5'>
                   <div className='card-img h-full relative'>
                     <img
-                      src='/images/ExpertMovers.jpeg'
+                      src='/images/expert-movers.jpeg'
                       alt=''
                       className='img-fluid-services object-cover w-full h-full'
                     />
@@ -228,7 +228,7 @@ function Main() {
                 <div className='w-full md:w-1/3 px-4 mb-5'>
                   <div className='card-img h-full relative'>
                     <img
-                      src='/images/ReddyMovers.jpeg'
+                      src='/images/reddy-movers.jpeg'
                       alt=''
                       className='img-fluid-services object-cover w-full h-full'
                     />
