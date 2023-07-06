@@ -29,7 +29,7 @@ function Main() {
                 inkluderer:
               </p>
               <a
-                href='/'
+                href='contact'
                 className='inline-block px-6 py-3 mt-4 bg-orange-500 text-white rounded-lg hover:bg-orange-600 text-xl'>
                 Bestill flyttingen din i dag
               </a>
@@ -185,8 +185,8 @@ function Main() {
                     flytting.
                   </p>
                   <a
-                    href='/'
-                    className='inline-block mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg'>
+                    href='contact'
+                    className='inline-block mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg sm:inline sm:mt-0 sm:ml-4'>
                     Få svar - Ofte stilte spørsmål
                   </a>
                 </div>
@@ -244,9 +244,11 @@ function Main() {
           </section>
 
           <div className='text-center mt-4'>
-            <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+            <a
+              href='contact'
+              className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
               Bestill flyttingen din i dag
-            </button>
+            </a>
           </div>
 
           <section className='bg-white py-8'>
