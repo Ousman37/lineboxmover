@@ -10,7 +10,7 @@ function Main() {
           <div
             className='container flex items-center justify-center mx-auto px-4 max-w-8xl h-screen mt-20' // Added 'mt-20' class for top margin
             style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hero-section.jpg')`, // Added linear gradient for background transparency
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hero-section.jpeg')`, // Added linear gradient for background transparency
               backgroundPosition: 'center',
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
@@ -55,7 +55,7 @@ function Main() {
                   margin: '0 auto',
                 }}>
                 <img
-                  src='/images/quick.jpg'
+                  src='/images/quick.jpeg'
                   alt='Quick Movers'
                   className='card-image md:w-1/2 p-8'
                 />
@@ -160,7 +160,7 @@ function Main() {
                   margin: '0 auto',
                 }}>
                 <img
-                  src='/images/quick.jpg'
+                  src='/images/quick.jpeg'
                   alt='Quick Movers'
                   className='card-image md:w-1/2 p-8'
                 />
@@ -200,7 +200,7 @@ function Main() {
                 <div className='w-full md:w-1/3 px-4 mb-5'>
                   <div className='card-img h-full relative'>
                     <img
-                      src='/images/PremierMovers.jpg'
+                      src='/images/PremierMovers.jpeg'
                       alt=''
                       className='img-fluid-services object-cover w-full h-full'
                     />
@@ -214,7 +214,7 @@ function Main() {
                 <div className='w-full md:w-1/3 px-4 mb-5'>
                   <div className='card-img h-full relative'>
                     <img
-                      src='/images/ExpertMovers.jpg'
+                      src='/images/ExpertMovers.jpeg'
                       alt=''
                       className='img-fluid-services object-cover w-full h-full'
                     />
@@ -228,7 +228,7 @@ function Main() {
                 <div className='w-full md:w-1/3 px-4 mb-5'>
                   <div className='card-img h-full relative'>
                     <img
-                      src='/images/ReddyMovers.jpg'
+                      src='/images/ReddyMovers.jpeg'
                       alt=''
                       className='img-fluid-services object-cover w-full h-full'
                     />
@@ -255,7 +255,7 @@ function Main() {
                 <div className='w-full md:w-1/2 p-4'>
                   <img
                     className='w-full h-auto max-h-96 object-cover'
-                    src='/images/moving-services.jpg'
+                    src='/images/moving-services.jpeg'
                     alt='LINEBOX img'
                   />
                 </div>
