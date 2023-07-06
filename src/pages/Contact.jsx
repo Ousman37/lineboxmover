@@ -6,9 +6,11 @@ const Contact = () => {
     email: '',
     phone: '',
     message: '',
+    service: [],
   });
 
   const [errors, setErrors] = useState({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const validateForm = event => {
     event.preventDefault();
@@ -31,6 +33,10 @@ const Contact = () => {
       newErrors.message = 'Please enter your message';
     }
 
+    if (formValues.service.length === 0) {
+      newErrors.service = 'Please select at least one service';
+    }
+
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
@@ -42,16 +48,28 @@ const Contact = () => {
         email: '',
         phone: '',
         message: '',
+        service: [],
       });
+      setIsSubmitted(true);
     }
   };
 
   const handleChange = event => {
-    const { id, value } = event.target;
-    setFormValues(prevFormValues => ({
-      ...prevFormValues,
-      [id]: value,
-    }));
+    const { id, value, type, checked } = event.target;
+    if (type === 'checkbox') {
+      const updatedService = checked
+        ? [...formValues.service, value]
+        : formValues.service.filter(service => service !== value);
+      setFormValues(prevFormValues => ({
+        ...prevFormValues,
+        service: updatedService,
+      }));
+    } else {
+      setFormValues(prevFormValues => ({
+        ...prevFormValues,
+        [id]: value,
+      }));
+    }
   };
 
   return (
@@ -60,7 +78,7 @@ const Contact = () => {
         <section className='container mx-auto'>
           <div className='flex flex-wrap justify-between'>
             <div className='w-full md:w-1/2 px-4 mb-8'>
-              <h1 className='text-3xl font-bold text-orange-500 mb-6'>
+              <h1 className='text-3xl font-bold text-orange-500 mb-6 mt-10'>
                 Kontaktskjema
               </h1>
               <p className='text-orange-500 mb-8'>
@@ -69,116 +87,134 @@ const Contact = () => {
                 beste for å svare deg så raskt som mulig.
               </p>
 
-              <form onSubmit={validateForm}>
-                <div className='mb-6'>
-                  <input
-                    type='text'
-                    id='name'
-                    placeholder='Navn'
-                    required
-                    value={formValues.name}
-                    onChange={handleChange}
-                    className='w-full h-12 px-4 border-2 border-green-600 rounded outline-none text-base'
-                  />
-                  {errors.name && <span className='error'>{errors.name}</span>}
+              {isSubmitted ? (
+                <div className='text-green-600 mb-8'>
+                  Thank you for your submission!
                 </div>
-                <div className='mb-6'>
-                  <input
-                    type='email'
-                    id='email'
-                    placeholder='E-post'
-                    required
-                    value={formValues.email}
-                    onChange={handleChange}
-                    className='w-full h-12 px-4 border-2 border-green-600 rounded outline-none text-base'
-                  />
-                  {errors.email && (
-                    <span className='error'>{errors.email}</span>
-                  )}
-                </div>
-                <div className='mb-6'>
-                  <input
-                    type='tel'
-                    id='phone'
-                    placeholder='Telefon'
-                    required
-                    value={formValues.phone}
-                    onChange={handleChange}
-                    className='w-full h-12 px-4 border-2 border-green-600 rounded outline-none text-base'
-                  />
-                  {errors.phone && (
-                    <span className='error'>{errors.phone}</span>
-                  )}
-                </div>
-                <div className='mb-6'>
-                  <p className='text-base font-bold'>Tjeneste:</p>
-                  <div className='mb-2'>
+              ) : (
+                <form onSubmit={validateForm}>
+                  <div className='mb-6'>
                     <input
-                      type='checkbox'
-                      id='flytting'
-                      name='service'
-                      value='flytting'
-                      className='mr-2'
+                      type='text'
+                      id='name'
+                      placeholder='Navn'
+                      required
+                      value={formValues.name}
+                      onChange={handleChange}
+                      className='w-full h-12 px-4 border-2 border-green-600 rounded outline-none text-base'
                     />
-                    <label htmlFor='flytting' className='text-base text-black'>
-                      Flytting
-                    </label>
+                    {errors.name && (
+                      <span className='error'>{errors.name}</span>
+                    )}
                   </div>
-                  <div className='mb-2'>
+                  <div className='mb-6'>
                     <input
-                      type='checkbox'
-                      id='kontorflytting-oslo'
-                      name='service'
-                      value='kontorflytting-oslo'
-                      className='mr-2'
+                      type='email'
+                      id='email'
+                      placeholder='E-post'
+                      required
+                      value={formValues.email}
+                      onChange={handleChange}
+                      className='w-full h-12 px-4 border-2 border-green-600 rounded outline-none text-base'
                     />
-                    <label
-                      htmlFor='kontorflytting-oslo'
-                      className='text-base text-black'>
-                      Kontorflytting Oslo
-                    </label>
+                    {errors.email && (
+                      <span className='error'>{errors.email}</span>
+                    )}
                   </div>
-                  <div className='mb-2'>
+                  <div className='mb-6'>
                     <input
-                      type='checkbox'
-                      id='minilager-oslo'
-                      name='service'
-                      value='minilager-oslo'
-                      className='mr-2'
+                      type='tel'
+                      id='phone'
+                      placeholder='Telefon'
+                      required
+                      value={formValues.phone}
+                      onChange={handleChange}
+                      className='w-full h-12 px-4 border-2 border-green-600 rounded outline-none text-base'
                     />
-                    <label
-                      htmlFor='minilager-oslo'
-                      className='text-base text-black'>
-                      Minilager Oslo
-                    </label>
+                    {errors.phone && (
+                      <span className='error'>{errors.phone}</span>
+                    )}
                   </div>
-                  {errors.service && (
-                    <span className='error'>{errors.service}</span>
-                  )}
-                </div>
-                <div className='mb-6'>
-                  <textarea
-                    id='message'
-                    rows='5'
-                    placeholder='Melding'
-                    required
-                    value={formValues.message}
-                    onChange={handleChange}
-                    className='w-full px-4 py-2 border-2 border-green-600 rounded outline-none text-base'></textarea>
-                  {errors.message && (
-                    <span className='error'>{errors.message}</span>
-                  )}
-                </div>
-                <button
-                  type='submit'
-                  className='bg-green-600 text-white text-lg font-bold py-3 px-6 rounded transition-colors duration-300 hover:bg-green-700'>
-                  Send
-                </button>
-              </form>
+                  <div className='mb-6'>
+                    <p className='text-base font-bold'>Tjeneste:</p>
+                    <div className='mb-2'>
+                      <input
+                        type='checkbox'
+                        id='flytting'
+                        name='service'
+                        value='flytting'
+                        checked={formValues.service.includes('flytting')}
+                        onChange={handleChange}
+                        className='mr-2'
+                      />
+                      <label
+                        htmlFor='flytting'
+                        className='text-base text-black'>
+                        Flytting
+                      </label>
+                    </div>
+                    <div className='mb-2'>
+                      <input
+                        type='checkbox'
+                        id='kontorflytting-oslo'
+                        name='service'
+                        value='kontorflytting-oslo'
+                        checked={formValues.service.includes(
+                          'kontorflytting-oslo'
+                        )}
+                        onChange={handleChange}
+                        className='mr-2'
+                      />
+                      <label
+                        htmlFor='kontorflytting-oslo'
+                        className='text-base text-black'>
+                        Kontorflytting Oslo
+                      </label>
+                    </div>
+                    <div className='mb-2'>
+                      <input
+                        type='checkbox'
+                        id='minilager-oslo'
+                        name='service'
+                        value='minilager-oslo'
+                        checked={formValues.service.includes('minilager-oslo')}
+                        onChange={handleChange}
+                        className='mr-2'
+                      />
+                      <label
+                        htmlFor='minilager-oslo'
+                        className='text-base text-black'>
+                        Minilager Oslo
+                      </label>
+                    </div>
+                    {errors.service && (
+                      <span className='error'>{errors.service}</span>
+                    )}
+                  </div>
+                  <div className='mb-6'>
+                    <textarea
+                      id='message'
+                      rows='5'
+                      placeholder='Melding'
+                      required
+                      value={formValues.message}
+                      onChange={handleChange}
+                      className='w-full px-4 py-2 border-2 border-green-600 rounded outline-none text-base'></textarea>
+                    {errors.message && (
+                      <span className='error'>{errors.message}</span>
+                    )}
+                  </div>
+                  <button
+                    type='submit'
+                    className='bg-green-600 text-white text-lg font-bold py-3 px-6 rounded transition-colors duration-300 hover:bg-green-700'>
+                    Send
+                  </button>
+                </form>
+              )}
             </div>
 
             <div className='w-full md:w-1/2 px-4 mb-8'>
-              <h2 className='text-xl font-bold mb-6'>Finn oss</h2>
+              <h2 className='text-xl font-bold mb-6 mt-10'>Finn oss</h2>
               <div>
                 <p>
                   <span className='text-black'>
