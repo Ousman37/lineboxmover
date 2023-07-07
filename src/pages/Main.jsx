@@ -18,15 +18,15 @@ function Main() {
             }}>
             <div className='flex flex-col items-center text-center w-full'>
               <h1 className='text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-4'>
-                Enklere flytting med linebox, din problemfrie flytteløsning.
+                Vi forenkler flyttingen med Linebox - din problemfrie løsning
+                for flytting.
               </h1>
               <p className='mt-2 text-lg md:text-xl lg:text-2xl text-white'>
-                På Linebox tilbyr vi et bredt spekter av tilpassede
-                flyttetjenester for å imøtekomme dine unike behov. Vårt team av
-                erfarne flyttearbeidere er her for å gjøre flyttingen din så
-                stressfri og praktisk som mulig. Enten du flytter innenfor samme
-                by eller på tvers av landet, er vi her for deg. Våre tjenester
-                inkluderer:
+                Linebox tilbyr skreddersydde flyttetjenester for å møte dine
+                unike behov. Vårt erfarne team av flyttearbeidere er dedikert
+                til å gjøre flyttingen din så enkel og praktisk som mulig.
+                Uansett om du flytter lokalt eller over lange avstander, kan du
+                stole på oss. Våre tjenester inkluderer:
               </p>
               <a
                 href='contact'
