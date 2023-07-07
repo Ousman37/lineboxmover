@@ -1,16 +1,17 @@
 import React from 'react';
 import { FaCheck } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Main() {
   return (
     <>
       <body className='overflow-x-hidden'>
         <section id='headline' className='relative overflow-hidden'>
-          <div className='absolute inset-x-0 top-0 h-px bg-slate-900/5 dark:bg-slate-100/5' />
+          <div className='absolute inset-x-0 top-0 h-px bg-gray-300' />
           <div
-            className='container flex items-center justify-center mx-auto px-4 max-w-8xl h-screen mt-20' // Added 'mt-20' class for top margin
+            className='container flex items-center justify-center mx-auto px-4 max-w-8xl h-screen mt-20'
             style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hero-section.jpeg')`, // Added linear gradient for background transparency
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hero-section.jpeg')`,
               backgroundPosition: 'center',
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
@@ -28,32 +29,23 @@ function Main() {
                 Uansett om du flytter lokalt eller over lange avstander, kan du
                 stole på oss. Våre tjenester inkluderer:
               </p>
-              <a
-                href='contact'
-                className='inline-block px-6 py-3 mt-4 bg-orange-500 text-white rounded-lg hover:bg-orange-600 text-xl'>
+              <Link
+                to='/contact'
+                className='inline-block px-6 py-3 mt-4 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition duration-300 text-xl'>
                 Bestill flyttingen din i dag
-              </a>
+              </Link>
             </div>
           </div>
-          <div className='absolute inset-x-0 bottom-0 h-px bg-slate-900/5 dark:bg-slate-100/5' />
+          <div className='absolute inset-x-0 bottom-0 h-px bg-gray-300' />
         </section>
 
         <section>
-          <h2 className='text-center pr-3 pt-5 mb-5'>
+          <h2 className='text-center text-2xl font-bold py-4'>
             Grunner til å vurdere Linebox for dine flyttebehov
           </h2>
-          <section
-            className='service-section py-8 md:py-16 lg:py-24'
-            style={{
-              backgroundColor: '#f5f5f5',
-            }}>
+          <section className='service-section py-8 md:py-16 lg:py-24 bg-gray-100'>
             <div className='container mx-auto px-4'>
-              <div
-                className='card md:flex items-center shadow-lg'
-                style={{
-                  maxWidth: '1140px',
-                  margin: '0 auto',
-                }}>
+              <div className='card md:flex items-center shadow-lg'>
                 <img
                   src='/images/quick.jpeg'
                   alt='Quick Movers'
@@ -105,188 +97,110 @@ function Main() {
               </div>
             </div>
           </section>
-          <section className='contact-section py-8 md:py-16 lg:py-24'>
-            <div className='container mx-auto px-4'>
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-                <div className='card shadow-lg'>
-                  <div className='card-content p-8'>
-                    <h3 className='text-orange-500 md:text-xl'>
-                      3: Fyll ut kontaktskjemaet:
-                    </h3>
-                    <p className='card-text text-base sm:text-lg md:text-xl lg:text-2xl text-gray-500'>
-                      For å kunne gi deg en mer nøyaktig prisforespørsel, setter
-                      vi pris på om du kan gi oss så mye informasjon som mulig
-                      om oppdraget ditt når du fyller ut kontaktskjemaet.
-                    </p>
-                  </div>
-                </div>
-                <div className='card shadow-lg'>
-                  <div className='card-content p-8'>
-                    <h3 className='text-orange-500  md:text-xl'>
-                      3: Fyll ut kontaktskjemaet:
-                    </h3>
-                    <p className='card-text text-lg md:text-xl lg:text-2xl text-gray-500'>
-                      For å kunne gi deg en mer nøyaktig prisforespørsel, setter
-                      vi pris på om du kan gi oss så mye informasjon som mulig
-                      om oppdraget ditt når du fyller ut kontaktskjemaet.
-                    </p>
-                  </div>
-                </div>
-                <div className='card shadow-lg'>
-                  <div className='card-content p-8'>
-                    <h3 className='text-orange-500  md:text-xl'>
-                      3: Fyll ut kontaktskjemaet:
-                    </h3>
-                    <p className='card-text text-lg md:text-xl lg:text-2xl text-gray-500'>
-                      For å kunne gi deg en mer nøyaktig prisforespørsel, setter
-                      vi pris på om du kan gi oss så mye informasjon som mulig
-                      om oppdraget ditt når du fyller ut kontaktskjemaet.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section
-            className='service-section py-8 md:py-16 lg:py-24'
-            style={{
-              backgroundColor: '#f5f5f5',
-            }}>
-            <div className='container mx-auto px-4'>
-              <div
-                className='card md:flex items-center shadow-lg'
-                style={{
-                  maxWidth: '1140px',
-                  margin: '0 auto',
-                }}>
-                <img
-                  src='/images/quick.jpeg'
-                  alt='Quick Movers'
-                  className='card-image md:w-1/2 p-8'
-                />
-                <div className='card-content md:w-1/2 p-8'>
-                  <p className='card-text text-lg md:text-xl lg:text-2xl mb-8'>
-                    Leter du etter et pålitelig flyttebyrå i Oslo eller Viken?
-                    Søk ikke lenger enn Linebox. Vi spesialiserer oss på å tilby
-                    omfattende flyttetjenester for alle typer flyttinger, enten
-                    de er store eller små. Fra pakking og transport til
-                    rengjøring og avfallshåndtering, kan vi håndtere alle
-                    aspekter av flyttingen i henhold til dine spesifikke behov.
-                    Vi forstår at flytting kan være en skremmende oppgave,
-                    derfor tilbyr vi ekstra tjenester som flyttevask og
-                    møbeloppbevaring for å forenkle prosessen for deg. Som et av
-                    de best rangerte flyttebyråene i Oslo, er vi forpliktet til
-                    å sikre en jevn og stressfri flytteopplevelse for alle våre
-                    kunder. Enten du trenger hjelp med en husstandsflytting
-                    eller opprydning av en eiendom, kan du stole på oss for å gi
-                    den ekspertisen og støtten du trenger for å få flyttingen
-                    din til å bli vellykket. Kontakt oss i dag for å lære mer om
-                    våre tjenester og hvordan vi kan hjelpe deg med din
-                    flytting.
-                  </p>
-                  <a
-                    href='contact'
-                    className='inline-block mt-9 mb-25 px-4 py-2 bg-orange-500 text-white rounded-lg sm:inline sm:mt-0 sm:ml-4'>
-                    Få svar - Ofte stilte spørsmål
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
+          <h2 className='text-center text-2xl font-bold py-4'>
+            Oppdag våre tjenester
+          </h2>
+          <p className='text-gray-700 text-center'>
+            Med vår omfattende erfaring og løsningsorienterte tilnærming til
+            logistikk, tilbyr vi et bredt spekter av fleksible flyttetjenester
+            til de mest konkurransedyktige prisene i bransjen. Vi prioriterer
+            kvalitet og leverer raske og pålitelige flyttetjenester for alle
+            dine behov, inkludert transport av store gjenstander som safes og
+            møbler, samt rydding og håndtering av eiendommer.
+          </p>
+        </section>
 
-          <section className='custom-section-services custom-inner-section'>
-            <div className='container mx-auto'>
-              <div className='flex flex-wrap -mx-4 justify-center'>
-                <div className='w-full md:w-1/3 px-4 mb-5'>
-                  <div className='card-img h-full relative'>
-                    <img
-                      src='/images/premier-movers.jpeg'
-                      alt=''
-                      className='img-fluid-services object-cover w-full h-full'
-                    />
-                    <div className='card-body absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex items-center justify-center'>
-                      <h3
-                        className='card-title text-white text-center'
-                        style={{ textShadow: '1px 1px 2px #000000' }}>
-                        Minilager
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-                <div className='w-full md:w-1/3 px-4 mb-5'>
-                  <div className='card-img h-full relative'>
-                    <img
-                      src='/images/expert-movers.jpeg'
-                      alt=''
-                      className='img-fluid-services object-cover w-full h-full'
-                    />
-                    <div className='card-body absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex items-center justify-center'>
-                      <h3
-                        className='card-title text-white text-center'
-                        style={{ textShadow: '1px 1px 2px #000000' }}>
-                        Kontorflytting
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-                <div className='w-full md:w-1/3 px-4 mb-5'>
-                  <div className='card-img h-full relative'>
-                    <img
-                      src='/images/reddy-movers.jpeg'
-                      alt=''
-                      className='img-fluid-services object-cover w-full h-full'
-                    />
-                    <div className='card-body absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex items-center justify-center'>
-                      <h3
-                        className='card-title text-white text-center'
-                        style={{ textShadow: '1px 1px 2px #000000' }}>
-                        Flyttehjelp
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <div className='text-center mt-4'>
-            <a
-              href='contact'
-              className='bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
-              Bestill flyttingen din i dag
-            </a>
-          </div>
-
-          <section className='bg-white py-8'>
-            <div className='container mx-auto'>
-              <div className='flex flex-wrap items-center'>
-                <div className='w-full md:w-1/2 p-4'>
+        <section className='custom-section-services custom-inner-section py-8 md:py-16 lg:py-24 bg-white'>
+          <div className='container mx-auto'>
+            <div className='flex flex-wrap -mx-4 justify-center'>
+              <div className='w-full md:w-1/3 px-4 mb-5'>
+                <div className='card-img h-full relative'>
                   <img
-                    className='w-full h-auto max-h-96 object-cover'
-                    src='/images/moving-services.jpeg'
-                    alt='LINEBOX img'
+                    src='/images/premier-movers.jpeg'
+                    alt=''
+                    className='img-fluid-services object-cover w-full h-full'
                   />
+                  <div className='card-body absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex items-center justify-center'>
+                    <h3
+                      className='card-title text-white text-center'
+                      style={{ textShadow: '1px 1px 2px #000000' }}>
+                      Minilager
+                    </h3>
+                  </div>
                 </div>
-                <div className='w-full md:w-1/2 p-4'>
-                  <div className='px-4'>
-                    <h5 className='text-2xl font-bold mb-4'>
-                      Velkommen til LineBox – ditt pålitelige flyttefirma i Oslo
-                    </h5>
-                    <p className='text-gray-600'>
-                      Vi strekker oss langt for å gjøre din flytteopplevelse så
-                      enkel og stressfri som mulig. Med vår ekspertise og
-                      erfaring, kan du være trygg på at dine eiendeler vil bli
-                      håndtert med omsorg og presisjon. Vi tilbyr skreddersydde
-                      løsninger for å møte dine individuelle behov og ønsker,
-                      slik at du kan fokusere på å komme videre til ditt nye
-                      hjem. Velg LineBox for å få en trygg og pålitelig
-                      flytteopplevelse.
-                    </p>
+              </div>
+              <div className='w-full md:w-1/3 px-4 mb-5'>
+                <div className='card-img h-full relative'>
+                  <img
+                    src='/images/expert-movers.jpeg'
+                    alt=''
+                    className='img-fluid-services object-cover w-full h-full'
+                  />
+                  <div className='card-body absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex items-center justify-center'>
+                    <h3
+                      className='card-title text-white text-center'
+                      style={{ textShadow: '1px 1px 2px #000000' }}>
+                      Kontorflytting
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div className='w-full md:w-1/3 px-4 mb-5'>
+                <div className='card-img h-full relative'>
+                  <img
+                    src='/images/reddy-movers.jpeg'
+                    alt=''
+                    className='img-fluid-services object-cover w-full h-full'
+                  />
+                  <div className='card-body absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex items-center justify-center'>
+                    <h3
+                      className='card-title text-white text-center'
+                      style={{ textShadow: '1px 1px 2px #000000' }}>
+                      Flyttehjelp
+                    </h3>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
+
+        <div className='text-center mt-4 mb-8'>
+          <Link
+            to='/contact'
+            className='bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+            Bestill flyttingen din i dag
+          </Link>
+        </div>
+
+        <section className='bg-gray-100 py-8'>
+          <div className='container mx-auto'>
+            <div className='flex flex-wrap items-center'>
+              <div className='w-full md:w-1/2 p-4'>
+                <img
+                  className='w-full h-auto max-h-96 object-cover'
+                  src='/images/moving-services.jpeg'
+                  alt='LINEBOX img'
+                />
+              </div>
+              <div className='w-full md:w-1/2 p-4'>
+                <div className='px-4'>
+                  <h5 className='text-2xl font-bold mb-4'>
+                    Velkommen til LineBox – ditt pålitelige flyttefirma i Oslo
+                  </h5>
+                  <p className='text-gray-600'>
+                    Vi strekker oss langt for å gjøre din flytteopplevelse så
+                    enkel og stressfri som mulig. Med vår ekspertise og
+                    erfaring, kan du være trygg på at dine eiendeler vil bli
+                    håndtert med omsorg og presisjon. Vi tilbyr skreddersydde
+                    løsninger for å møte dine individuelle behov og ønsker, slik
+                    at du kan fokusere på å komme videre til ditt nye hjem. Velg
+                    LineBox for å få en trygg og pålitelig flytteopplevelse.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </body>
     </>
