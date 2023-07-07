@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,35 +17,35 @@ const Header = () => {
     <header>
       <div className='flex items-center justify-between px-4 py-2 bg-white fixed top-0 left-0 right-0 z-10 shadow-md'>
         <div className='flex items-center'>
-          <a href='/'>
+          <Link to='/'>
             <img
               src='/images/logo-black.png'
               alt='Logo'
               className='h-16 w-auto mr-2'
             />
-          </a>
+          </Link>
         </div>
         <nav className='space-x-4 hidden md:block'>
-          <a
-            href='/'
+          <Link
+            to='/'
             className='text-black hover:text-gray-300 transition duration-300'>
             Flytteservice
-          </a>
-          <a
-            href='/pristilbud'
+          </Link>
+          <Link
+            to='/price'
             className='text-black hover:text-gray-300 transition duration-300'>
             Pristilbud
-          </a>
-          <a
-            href='/about'
+          </Link>
+          <Link
+            to='/about'
             className='text-black hover:text-gray-300 transition duration-300'>
             Om oss
-          </a>
-          <a
-            href='/Contact'
+          </Link>
+          <Link
+            to='/contact'
             className='text-black hover:text-gray-300 transition duration-300'>
             Kontakt
-          </a>
+          </Link>
         </nav>
         <div onClick={handleNavToggle} className='md:hidden'>
           {isMobileMenuOpen ? (
@@ -62,32 +63,36 @@ const Header = () => {
             <nav className='text-black'>
               <ul className='space-y-4 text-center'>
                 <li>
-                  <a
-                    href='/'
-                    className='block py-2 hover:text-gray-300 transition duration-300'>
+                  <Link
+                    to='/'
+                    className='block py-2 hover:text-gray-300 transition duration-300'
+                    onClick={handleCloseMenu}>
                     Flytteservice
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href='/pristilbud'
-                    className='block py-2 hover:text-gray-300 transition duration-300'>
+                  <Link
+                    to='/price'
+                    className='block py-2 hover:text-gray-300 transition duration-300'
+                    onClick={handleCloseMenu}>
                     Pristilbud
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href='/about'
-                    className='block py-2 hover:text-gray-300 transition duration-300'>
+                  <Link
+                    to='/about'
+                    className='block py-2 hover:text-gray-300 transition duration-300'
+                    onClick={handleCloseMenu}>
                     Om oss
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href='/contact'
-                    className='block py-2 hover:text-gray-300 transition duration-300'>
+                  <Link
+                    to='/contact'
+                    className='block py-2 hover:text-gray-300 transition duration-300'
+                    onClick={handleCloseMenu}>
                     Kontakt
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
