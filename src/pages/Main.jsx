@@ -165,7 +165,7 @@ function Main() {
                   className='card-image md:w-1/2 p-8'
                 />
                 <div className='card-content md:w-1/2 p-8'>
-                  <p className='card-text text-lg md:text-xl lg:text-2xl'>
+                  <p className='card-text text-lg md:text-xl lg:text-2xl mb-8'>
                     Leter du etter et pålitelig flyttebyrå i Oslo eller Viken?
                     Søk ikke lenger enn Linebox. Vi spesialiserer oss på å tilby
                     omfattende flyttetjenester for alle typer flyttinger, enten
@@ -186,7 +186,7 @@ function Main() {
                   </p>
                   <a
                     href='contact'
-                    className='inline-block mt-8 px-4 py-2 bg-blue-500 text-white rounded-lg sm:inline sm:mt-0 sm:ml-4'>
+                    className='inline-block mt-9 mb-25 px-4 py-2 bg-orange-500 text-white rounded-lg sm:inline sm:mt-0 sm:ml-4'>
                     Få svar - Ofte stilte spørsmål
                   </a>
                 </div>
@@ -205,7 +205,9 @@ function Main() {
                       className='img-fluid-services object-cover w-full h-full'
                     />
                     <div className='card-body absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex items-center justify-center'>
-                      <h3 className='card-title text-white text-center'>
+                      <h3
+                        className='card-title text-white text-center'
+                        style={{ textShadow: '1px 1px 2px #000000' }}>
                         Minilager
                       </h3>
                     </div>
@@ -219,7 +221,9 @@ function Main() {
                       className='img-fluid-services object-cover w-full h-full'
                     />
                     <div className='card-body absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex items-center justify-center'>
-                      <h3 className='card-title text-white text-center'>
+                      <h3
+                        className='card-title text-white text-center'
+                        style={{ textShadow: '1px 1px 2px #000000' }}>
                         Kontorflytting
                       </h3>
                     </div>
@@ -233,7 +237,9 @@ function Main() {
                       className='img-fluid-services object-cover w-full h-full'
                     />
                     <div className='card-body absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex items-center justify-center'>
-                      <h3 className='card-title text-white text-center'>
+                      <h3
+                        className='card-title text-white text-center'
+                        style={{ textShadow: '1px 1px 2px #000000' }}>
                         Flyttehjelp
                       </h3>
                     </div>
@@ -246,7 +252,7 @@ function Main() {
           <div className='text-center mt-4'>
             <a
               href='contact'
-              className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+              className='bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
               Bestill flyttingen din i dag
             </a>
           </div>
