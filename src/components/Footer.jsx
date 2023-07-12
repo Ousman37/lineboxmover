@@ -2,23 +2,27 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className='bg-gray-200 py-8 mt-auto'>
+    <footer className='bg-gray-200 py-8 mt-auto px-7'>
       <div className='container mx-auto'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
           <div>
-            <h6 className='text-xl font-bold mb-4'>
-              LINEBOX Flytteservice - Totalleverandør for flytting i Oslo og
+            <a href='/' className='text-md font-bold'>
+              LINEBOX
+            </a>
+
+            <h6 className='text-md  mb-2'>
+              Flytteservice er din komplette partner for flytting i Oslo og
               Akershus!
             </h6>
           </div>
           <div>
-            <h6 className='text-xl font-bold mb-4'>Contact Details</h6>
+            <h6 className='text-sm font-bold mb-4'>Contact Details</h6>
             <p>Adresse: Nedre Ullevål 4 c 0850 Oslo</p>
             <p>Telefon: 96800897</p>
             <p>Email: Post@linebox.no</p>
           </div>
           <div>
-            <h6 className='text-xl font-bold mb-4'>Quick Links</h6>
+            <h6 className='text-md font-bold mb-4'>Quick Links</h6>
             <ul className='footer-links'>
               <li>
                 <a href='/'>Kontakt</a>

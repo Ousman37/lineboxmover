@@ -100,7 +100,7 @@ function Main() {
           <h2 className='text-center text-2xl font-bold py-4'>
             Oppdag våre tjenester
           </h2>
-          <p className='text-gray-700 text-center'>
+          <p className='text-gray-600 px-4'>
             Med vår omfattende erfaring og løsningsorienterte tilnærming til
             logistikk, tilbyr vi et bredt spekter av fleksible flyttetjenester
             til de mest konkurransedyktige prisene i bransjen. Vi prioriterer
@@ -111,8 +111,8 @@ function Main() {
         </section>
 
         <section className='custom-section-services custom-inner-section py-8 md:py-16 lg:py-24 bg-white'>
-          <div className='container mx-auto'>
-            <div className='flex flex-wrap -mx-4 justify-center'>
+          <div className='container mx-auto px-4'>
+            <div className='flex flex-wrap justify-center -mx-4'>
               <div className='w-full md:w-1/3 px-4 mb-5'>
                 <div className='card-img h-full relative'>
                   <img
