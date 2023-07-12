@@ -45,7 +45,7 @@ function Main() {
           </h2>
           <section className='service-section py-8 md:py-16 lg:py-24 bg-gray-100'>
             <div className='container mx-auto px-4'>
-              <div className='card md:flex items-center shadow-lg'>
+              <div className='flex flex-col md:flex-row items-center md:items-stretch shadow-lg'>
                 <img
                   src='/images/quick.jpeg'
                   alt='Quick Movers'
